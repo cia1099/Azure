@@ -6,7 +6,7 @@ func init basicAzureFunction --worker-runtime python
 cd basicAzureFunction
 func new --name httpexample --template "HTTP trigger" --authlevel "anonymous"
 ```
-执行完上面的指令会生成[basicAzureFunction/function_app.py](function_app.py)等必要档案。\
+执行完上面的指令会生成[basicAzureFunction/function_app.py](./basicAzureFunction/function_app.py)等必要档案。\
 要执行本地环境，需要[Run Azurite](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite?tabs=npm#run-azurite):
 ```shell
 # npm install -g azurite
