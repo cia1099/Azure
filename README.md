@@ -56,3 +56,21 @@ func azure functionapp publish <FunctionAppName>
 * 其中\<FunctionAppName>是你在Azure账号里创建的Function名称。
 
 [更多az-cli操作](https://learn.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest#az-account-list-locations)
+
+## 在本地专案文件夹里建立python虚拟机
+首先先切换到想要克隆的python环境，然后在专案的目录下输入创建venv指令，就会在专案里生成venv的文件夹，会在这专案克隆你当前环境的python；但是依赖套件不会被安装。
+ ```shell
+ #--clone miniconda里的python
+ #conda activate <NAME>
+ #--clone rosseta上的python
+ #env /usr/bin/arch -x86_64 /bin/zsh --login
+ #建立本地环境
+ python -m venv /path/to/project/directory/venv
+ # ==== 启动本地环境
+ # UNIX
+ source /path/to/project/directory/venv/bin/activate
+ # WINDOWS
+ path\to\project\directory\venv\bin\activate.bat
+ ```
+ 建立完克隆的环境后，以后只要在专案资料夹`source`虚拟环境，就不用再启动**miniconda**或**Rosseta**了。 \
+ 用PyCharm来建立的话，会根据专案目录下的`requirements.txt`来自动安装依赖套件在venv。
